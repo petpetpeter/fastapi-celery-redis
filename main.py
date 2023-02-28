@@ -5,6 +5,7 @@ from fastapi import FastAPI
 
 from src.config.celery_utils import create_celery
 from src.routers import universities
+from src.routers import line
 
 
 def create_app() -> FastAPI:
@@ -15,6 +16,7 @@ def create_app() -> FastAPI:
 
     current_app.celery_app = create_celery()
     current_app.include_router(universities.router)
+    current_app.include_router(line.router)
     return current_app
 
 
