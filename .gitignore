@@ -96,6 +96,7 @@ ipython_config.py
 
 # celery beat schedule file
 celerybeat-schedule
+*.RedBeatScheduler
 
 # SageMath parsed files
 *.sage.py
