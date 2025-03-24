@@ -9,9 +9,9 @@ from src.routers import line
 
 
 def create_app() -> FastAPI:
-    current_app = FastAPI(title="Asynchronous tasks processing with Celery and RabbitMQ",
+    current_app = FastAPI(title="Asynchronous tasks processing with Celery and Redis",
                           description="Sample FastAPI Application to demonstrate Event "
-                                      "driven architecture with Celery and RabbitMQ",
+                                      "driven architecture with Celery and Redis",
                           version="1.0.0", )
 
     current_app.celery_app = create_celery()
